@@ -1,0 +1,19 @@
+html{
+    scroll-behavior: smooth;
+    
+}
+
+.main{
+    height: 110vh;
+    background-size: cover;  
+    width: 100%;
+    background-position: center;
+    background-image: url('../img/pus.jpg');
+}
+
+@media (max-width: 768px) { 
+    .main{
+        height: 88dvh;
+    }
+}
+

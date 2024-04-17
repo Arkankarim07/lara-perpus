@@ -17,8 +17,9 @@ class BukuFactory extends Factory
     public function definition(): array
     {
         return [
-            'judul' => fake()->sentence(mt_rand(2, 4)),
+            'judul' => fake()->sentence(mt_rand(1, 2)),
             'penulis' => fake()->name(),
+            'sinopsis' => fake()->paragraph(),
             'penerbit' => 'PT ' . $this->faker->company(),
             'stok' => fake()->numberBetween(1, 20),
             'tgl_terbit' => fake()->date('Y-m-d'),

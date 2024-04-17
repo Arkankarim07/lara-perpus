@@ -3,7 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +18,14 @@ class DatabaseSeeder extends Seeder
         $this->call([
             BukuSeeder::class
         ]);
+
+        // User::create([
+        //     'name' => 'Admin',
+        //     'email' => 'admin@localhost',
+        //     'password' => Hash::make('password'),
+        //     'role' => 'admin',
+        //     'created_at' => now(),
+        // ]);
 
         // \App\Models\User::factory(10)->create();
 

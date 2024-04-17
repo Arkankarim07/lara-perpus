@@ -20,10 +20,18 @@ class Login extends Component
             session()->regenerate();
 
             session()->flash('success', 'Berhasil Login');
+
+            if(auth()->user()->role == 'admin') {
+                return redirect()->to('/admin');
+            }
+            
             return redirect()->to('/home');
         } else {
             return back()->with('error', 'Password / Username is invalid');
         }
+
+
+        
             
     }
 

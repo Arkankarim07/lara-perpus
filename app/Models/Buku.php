@@ -10,4 +10,10 @@ class Buku extends Model
 
     protected $table = 'buku';
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function peminjaman() {
+        return $this->hasMany(Peminjaman::class);
+    }
 }
